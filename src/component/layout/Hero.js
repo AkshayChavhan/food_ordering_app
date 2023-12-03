@@ -6,8 +6,8 @@ function Hero() {
     return (
         <section className='hero py-8'>
             <div className='col-span-1'>
-                <h1 className='text-6xl font-bold py-5'>Everything <br/> better with <br/>
-                <span className='text-red-500 font-extrabold'>Desi Pizza</span></h1>
+                <h1 className='text-6xl font-bold py-5'>Everything <br /> better with <br />
+                    <span className='text-red-500 font-extrabold'>Desi Pizza</span></h1>
                 <p className='text-2xl text-gray-600 py-5'>
                     Piza is missing place that make the every day
                     complete , simple yet delicious joy in life.
@@ -25,12 +25,11 @@ function Hero() {
             </div>
             <div className='relative col-span-1'>
                 <Image
-                width={400}
-                height={400}
+                    layout='fill'
                     objectFit='content'
                     alt='pizza'
-                    src={'/pizza.png'} 
-                    />
+                    src={'/pizza.png'}
+                />
             </div>
         </section>
     )
