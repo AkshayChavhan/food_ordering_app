@@ -1,5 +1,4 @@
 import SectionHeader from "@/component/header/Section_header";
-import Header from "@/component/layout/Header";
 import Hero from "@/component/layout/Hero";
 import HomeMenu from "@/component/layout/HomeMenu";
 
@@ -7,7 +6,6 @@ import HomeMenu from "@/component/layout/HomeMenu";
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <HomeMenu />
       <section className="text-center my-16">
@@ -36,9 +34,6 @@ export default function Home() {
          </a>
         </div>
       </section>
-      <footer className="text-center border-t-2">
-        &copy; All rights are reserved
-      </footer>
     </>
   )
 }
