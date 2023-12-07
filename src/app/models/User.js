@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model , models } from "mongoose";
 import bcrypt from "bcrypt";
 
 
@@ -32,4 +32,4 @@ userSchema.post('validate', async (user) => {
 });
 
 
-export const User = model?.User || model('User', userSchema);
+export const User = models?.User || model('User', userSchema);
