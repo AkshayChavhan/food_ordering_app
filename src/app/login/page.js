@@ -15,7 +15,7 @@ export default function LoginPage() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     setLoginInProgress(true);
-
+    console.log("data ", email , password);
     await signIn('credentials', {email, password, callbackUrl: '/'});
 
     setLoginInProgress(false);

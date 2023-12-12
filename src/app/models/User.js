@@ -20,16 +20,17 @@ const userSchema = new Schema({
 },{ timestamps : true});
 
 
-userSchema.post('validate', async (user) => {
-    try {
-        const saltRounds = 10;
-        const myPlaintextPassword = user.password;
-        const hash = await bcrypt.hash(myPlaintextPassword, saltRounds);
-        user.password = hash;
-    } catch (error) {
-        throw new Error("Error occurs while hashing password.");
-    }
-});
+// userSchema.post('validate', async (user) => {
+//     try {
+//         const saltRounds = 10;
+//         const myPlaintextPassword = user.password;
+//         console.log("myPlaintextPassword => ," ,myPlaintextPassword);
+//         const hash = await bcrypt.hash(myPlaintextPassword, saltRounds);
+//         user.password = hash;
+//     } catch (error) {
+//         throw new Error("Error occurs while hashing password.");
+//     }
+// });
 
 
 export const User = models?.User || model('User', userSchema);
