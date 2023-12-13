@@ -15,7 +15,7 @@ export default function LoginPage() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     setLoginInProgress(true);
-
+    console.log("data ", email , password);
     await signIn('credentials', {email, password, callbackUrl: '/'});
 
     setLoginInProgress(false);
@@ -38,7 +38,7 @@ export default function LoginPage() {
         </div>
         <button type="button" onClick={() => signIn('google', {callbackUrl: '/'})}
                 className="flex gap-4 justify-center">
-          <Image src={'/google.png'} alt={''} width={24} height={24} />
+          <Image src={'/google-logo.png'} alt={''} width={24} height={24} />
           Login with google
         </button>
       </form>
